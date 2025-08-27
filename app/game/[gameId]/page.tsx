@@ -4,7 +4,7 @@ import GameTableClient from "./GameTableClient";
 export default async function GamePage({ params }: { params: { gameId: string } }) {
  const gameId = params.gameId;
 
- // ✅ Simulate fetching game from database or API
+ // Simulate fetching game from database or API
  const isValid = await validateGameId(gameId);
 
  if (!isValid) {
