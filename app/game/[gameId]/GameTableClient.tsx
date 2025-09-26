@@ -7,9 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { ChevronLeft, ChevronRight, RotateCcw } from 'lucide-react';
 import Head from 'next/head';
 
-type GameTableClientProps = {
- gameId: string;
-};
+
 
 export default function GameTableClient({ gameId }: GameTableClientProps) {
  const { toast } = useToast();
