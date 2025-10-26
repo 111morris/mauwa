@@ -7,6 +7,21 @@ import { useToast } from "../hooks/use-toast";
 import { Copy, Play, Users } from "lucide-react";
 import SEO from "./SEO/SEO";
 
+const RoomLobby = () => {
+  const { roomId } = useParams();
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [name, setName] = useState("");
+
+  const copyCode = async () => {
+    try {
+      await navigator.clipboard.writeText(roomId || "");
+      toast({ title: "Copied", description: "Room code copied to clipboard" });
+    } catch {
+      toast({ title: "Copy failed", description: "Unable to copy code" });
+    }
+  };
+
 
   const startGame = () => {
     // Placeholder: navigate to game table for this room
